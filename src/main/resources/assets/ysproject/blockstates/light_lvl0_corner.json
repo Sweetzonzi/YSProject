@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ysproject:block/structure/light_lvl0_corner_north" },
+    "facing=south": { "model": "ysproject:block/structure/light_lvl0_corner_south" },
+    "facing=east": { "model": "ysproject:block/structure/light_lvl0_corner_east" },
+    "facing=west": { "model": "ysproject:block/structure/light_lvl0_corner_west" }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ysproject:block/structure/light_lvl0"
+  }
+}

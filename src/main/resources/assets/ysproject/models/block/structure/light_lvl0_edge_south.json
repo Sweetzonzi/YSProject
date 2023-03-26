@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "up": "ysproject:block/structure/light_lvl0_edge_north",
+    "down": "ysproject:block/structure/light_lvl0_edge_south",
+    "north": "ysproject:block/structure/light_lvl0",
+    "south": "ysproject:block/structure/light_lvl0",
+    "east": "ysproject:block/structure/light_lvl0",
+    "west": "ysproject:block/structure/light_lvl0",
+    "particle": "ysproject:block/structure/light_lvl0"
+  }
+}

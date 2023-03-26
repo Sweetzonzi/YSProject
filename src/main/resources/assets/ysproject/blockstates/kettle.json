@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "ysproject:block/decoration/kettle" },
+    "facing=east": { "model": "ysproject:block/decoration/kettle","y": 90 },
+    "facing=south": { "model": "ysproject:block/decoration/kettle","y": 180 },
+    "facing=west": { "model": "ysproject:block/decoration/kettle","y": 270 }
+  }
+}

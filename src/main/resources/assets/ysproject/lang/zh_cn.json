@@ -1,0 +1,36 @@
+{
+  "itemGroup.ys_structure": "映素:结构方块",
+  "itemGroup.ys_decoration": "映素:装饰方块",
+  "itemGroup.ys_prop": "映素:道具",
+  "itemGroup.ys_food": "映素:食物",
+
+  "block.ysproject.wall_lvl0": "后室Level0墙面",
+  "block.ysproject.floor_lvl0": "后室Level0地板",
+  "block.ysproject.ceiling_lvl0": "后室Level0中心天花板",
+  "block.ysproject.ceiling_lvl0_edge": "后室Level0边沿天花板",
+  "block.ysproject.ceiling_lvl0_corner": "后室Level0转角天花板",
+  "block.ysproject.light_lvl0": "后室Level0单个灯箱",
+  "block.ysproject.light_lvl0_center": "后室Level0中心灯箱",
+  "block.ysproject.light_lvl0_edge": "后室Level0边沿灯箱",
+  "block.ysproject.light_lvl0_corner": "后室Level0转角灯箱",
+
+  "block.ysproject.kettle": "烧水壶",
+
+  "item.ysproject.almond_water_red": "杏仁水(红)",
+  "item.ysproject.almond_water_orange": "杏仁水(橙)",
+  "item.ysproject.almond_water_yellow": "杏仁水(黄)",
+  "item.ysproject.almond_water_green": "杏仁水(绿)",
+  "item.ysproject.almond_water_purple": "杏仁水(紫)",
+  "item.ysproject.almond_water_black": "杏仁水(黑)",
+  "item.ysproject.money_1": "1元",
+  "item.ysproject.money_10": "10元",
+  "item.ysproject.money_100": "100元",
+  "item.ysproject.money_1000": "1000元",
+  "item.ysproject.money_10000": "10000元",
+
+  "item.ysproject.scp_card_1": "1级权限卡",
+  "item.ysproject.scp_card_2": "2级权限卡",
+  "item.ysproject.scp_card_3": "3级权限卡",
+  "item.ysproject.scp_card_4": "4级权限卡",
+  "item.ysproject.scp_card_5": "5级权限卡"
+}
