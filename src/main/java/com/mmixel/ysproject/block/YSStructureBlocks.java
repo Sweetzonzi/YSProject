@@ -1,6 +1,6 @@
 package com.mmixel.ysproject.block;
 
-import com.mmixel.ysproject.block.strucutre.YSHorizontalDirectionalBlock;
+import com.mmixel.ysproject.block.structure.YSHorizontalDirectionalBlock;
 import com.mmixel.ysproject.creativemodetab.YSTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
