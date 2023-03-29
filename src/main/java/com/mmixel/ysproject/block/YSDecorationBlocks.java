@@ -13,5 +13,5 @@ public class YSDecorationBlocks {
     //方块----------------------------------------------------
     //烧水壶,具体实现见block/decoration/KettleBlock.java
     public static final RegistryObject<Block> KETTLE = BlockRegister.registerBlock("kettle",
-            ()->new KettleBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission().randomTicks().sound(SoundType.COPPER)), YSTab.YS_DECORATION);
+            ()->new KettleBlock(BlockBehaviour.Properties.of(Material.METAL).noCollission().sound(SoundType.COPPER)), YSTab.YS_DECORATION);
 }
