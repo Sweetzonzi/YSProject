@@ -1,6 +1,7 @@
 package com.mmixel.ysproject.block.decoration;
 
 import com.mmixel.ysproject.item.YSPropItems;
+import com.mmixel.ysproject.item.prop.AlmondWaterItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -53,12 +54,12 @@ public class KettleBlock extends Block {
             if(pState.getValue(BOILED)) {//已有烧好的杏仁水，互动取出
                 //pLevel.setBlock(pPos,pState.setValue(BOILED, Boolean.FALSE),3);
                 pLevel.setBlock(pPos,defaultBlockState(),1);
-                popResource(pLevel,pPos,new ItemStack(YSPropItems.ALMOND_WATER_RED.get()));
+                popResource(pLevel,pPos,new ItemStack(YSPropItems.ALMOND_WATER_BOILED.get()));
                 boil_progress=0;
             }
             if(!pState.getValue(BOILED)&&!pState.getValue(BOILING)) {//无内容物时手持杏仁水互动，开始蒸煮杏仁水
                 ItemStack item_to_boil = pPlayer.getItemInHand(pHand);
-                if (item_to_boil.getItem() == YSPropItems.ALMOND_WATER_RED.get()) {
+                if (item_to_boil.getItem() instanceof AlmondWaterItem) {
                     pPlayer.sendMessage(new TextComponent("Start boiling..."), pPlayer.getUUID());
                     item_to_boil.shrink(1);
                     boil_progress=0;

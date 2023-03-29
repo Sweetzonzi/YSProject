@@ -2,6 +2,7 @@ package com.mmixel.ysproject.item;
 
 import com.mmixel.ysproject.creativemodetab.YSTab;
 import com.mmixel.ysproject.item.prop.AlmondWaterItem;
+import com.mmixel.ysproject.item.prop.BoiledAlmondWaterItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -26,6 +27,9 @@ public class YSPropItems {
     //杏仁水_黑
     public static final RegistryObject<Item> ALMOND_WATER_BLACK = ItemRegister.registerItem("almond_water_black",
             ()->new AlmondWaterItem(new Item.Properties().stacksTo(1).tab(YSTab.YS_PORP)));
+    //杏仁水_煮开
+    public static final RegistryObject<Item> ALMOND_WATER_BOILED = ItemRegister.registerItem("almond_water_boiled",
+            ()->new BoiledAlmondWaterItem(new Item.Properties().stacksTo(1).tab(YSTab.YS_PORP)));
     //钱币(后室)_1块
     public static final RegistryObject<Item> MONEY_1 = ItemRegister.registerItem("money_1",
             ()->new Item(new Item.Properties().tab(YSTab.YS_PORP)));
