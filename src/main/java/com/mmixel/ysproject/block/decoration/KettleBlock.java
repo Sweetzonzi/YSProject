@@ -108,7 +108,7 @@ public class KettleBlock extends BaseEntityBlock {
         return new KettleBlockEntity(pPos,pState);
     }
 
-    @Override//没有这个会导致模型不渲染？
+    @Override//没有这个会导致模型不渲染
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
