@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -40,10 +41,16 @@ public class KettleBlock extends BaseEntityBlock {
     public static final VoxelShape SHAPE = Block.box(2,0,2,14,7,14);
     public static final BooleanProperty BOILING = BooleanProperty.create("boiling");//是否有正在煮沸的杏仁水
     public static final BooleanProperty BOILED = BooleanProperty.create("boiled");//是否已煮开
+    public static final int BOILING_TIME = 100;//煮开所需时间（tick）
+    public static final IntegerProperty BOILING_PROGRESS = IntegerProperty.create("boiling_progress",0,BOILING_TIME);//蒸煮进度
 
     public KettleBlock(Properties pProperties) {
         super(pProperties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(BOILING,Boolean.FALSE).setValue(BOILED,Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any()
+                .setValue(FACING, Direction.NORTH)
+                .setValue(BOILING,Boolean.FALSE)
+                .setValue(BOILED,Boolean.FALSE)
+                .setValue(BOILING_PROGRESS,0));
     }
 
     @Override//互动时
@@ -95,6 +102,7 @@ public class KettleBlock extends BaseEntityBlock {
         pBuilder.add(FACING);
         pBuilder.add(BOILED);
         pBuilder.add(BOILING);
+        pBuilder.add(BOILING_PROGRESS);
     }
 
     @Override//修改碰撞箱
