@@ -1,12 +1,10 @@
 package com.mmixel.ysproject.block.decoration;
 
 import com.mmixel.ysproject.block.YSBlockEntities;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import org.slf4j.Logger;
 
 import static com.mmixel.ysproject.block.decoration.KettleBlock.*;
 
