@@ -2,7 +2,6 @@ package com.mmixel.ysproject.block.decoration;
 
 import com.mmixel.ysproject.block.YSBlockEntities;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.sounds.SoundEvent;
@@ -10,15 +9,20 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.builder.ILoopType;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
+
+import static com.mmixel.ysproject.block.decoration.LockerBlock.IS_OPENED;
 
 public class LockerBlockEntity extends ChestBlockEntity implements IAnimatable {
 
@@ -36,11 +40,20 @@ public class LockerBlockEntity extends ChestBlockEntity implements IAnimatable {
     @Override
     public void registerControllers(AnimationData data) {
         data.addAnimationController(new AnimationController<>
-                (this, "controller", 0, this::predicate));
+                (this, "door_controller", 0, this::predicate));
     }
 
-    private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event){
-        //event.getController().setAnimation();
+    private <E extends BlockEntity & IAnimatable> PlayState predicate(AnimationEvent<E> event){
+        if(event.getAnimatable().getBlockState().getValue(IS_OPENED)){
+            event.getController().transitionLengthTicks = 5;
+            event.getController().setAnimation(new AnimationBuilder()
+                .addAnimation("animation.locker.open", ILoopType.EDefaultLoopTypes.LOOP));
+        }
+        else{
+            event.getController().transitionLengthTicks = 40;
+            event.getController().setAnimation(new AnimationBuilder()
+                    .addAnimation("animation.locker.idle", ILoopType.EDefaultLoopTypes.LOOP));
+        }
         return PlayState.CONTINUE;
     }
 
@@ -51,16 +64,19 @@ public class LockerBlockEntity extends ChestBlockEntity implements IAnimatable {
 
     @Override
     public void startOpen(Player pPlayer) {
-        playSound(pPlayer,this.getLevel(),this.getBlockPos(),SoundEvents.CHEST_OPEN);
+        playSound(pPlayer, this.getBlockPos(), SoundEvents.CHEST_OPEN);
+        pPlayer.getLevel().setBlock(this.getBlockPos(),this.getBlockState().setValue(IS_OPENED,Boolean.TRUE),3);
     }
+    @Override
     public void stopOpen(Player pPlayer) {
-        playSound(pPlayer,this.getLevel(),this.getBlockPos(),SoundEvents.CHEST_CLOSE);
+        playSound(pPlayer, this.getBlockPos(), SoundEvents.CHEST_CLOSE);
+        pPlayer.getLevel().setBlock(this.getBlockPos(),this.getBlockState().setValue(IS_OPENED,Boolean.FALSE),3);
     }
 
-    static void playSound(Player player,Level pLevel, BlockPos pPos, SoundEvent pSound) {
+    static void playSound(Player player, BlockPos pPos, SoundEvent pSound) {
             double d0 = (double)pPos.getX() + 0.5D;
             double d1 = (double)pPos.getY() + 0.5D;
             double d2 = (double)pPos.getZ() + 0.5D;
-            pLevel.playSound(player, d0, d1, d2, pSound, SoundSource.BLOCKS, 0.5F, pLevel.random.nextFloat() * 0.1F + 1.5F);
+            player.getLevel().playSound(player, d0, d1, d2, pSound, SoundSource.BLOCKS, 0.5F, 1.5F);
     }
 }
