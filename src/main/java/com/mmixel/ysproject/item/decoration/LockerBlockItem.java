@@ -1,4 +1,4 @@
-package com.mmixel.ysproject.item.prop;
+package com.mmixel.ysproject.item.decoration;
 
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.BlockItem;

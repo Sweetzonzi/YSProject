@@ -1,4 +1,4 @@
-package com.mmixel.ysproject.item.prop;
+package com.mmixel.ysproject.item.decoration;
 
 import com.mmixel.ysproject.YSProject;
 import net.minecraft.resources.ResourceLocation;

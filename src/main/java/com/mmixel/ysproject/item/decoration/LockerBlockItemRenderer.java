@@ -1,4 +1,4 @@
-package com.mmixel.ysproject.item.prop;
+package com.mmixel.ysproject.item.decoration;
 
 import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
