@@ -56,3 +56,9 @@ Provides blocks and items for ysm server.
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.ysproject]]
+    modId="geckolib3"
+    mandatory=true
+    versionRange="[3.0,)"
+    ordering="AFTER"
+    side="BOTH"
