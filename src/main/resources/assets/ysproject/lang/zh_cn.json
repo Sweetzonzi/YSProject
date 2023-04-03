@@ -18,6 +18,18 @@
   "block.ysproject.locker": "储物柜",
   "block.ysproject.closet": "衣柜",
 
+  "item.ysproject.roast_pigeon": "烤乳鸽",
+  "item.ysproject.doughnut_1": "甜甜圈",
+  "item.ysproject.doughnut_2": "甜甜圈",
+  "item.ysproject.doughnut_3": "甜甜圈",
+  "item.ysproject.laoganma": "老干妈",
+  "item.ysproject.salty_fish": "咸鱼肉",
+  "item.ysproject.cooked_salty_fish": "熟咸鱼肉",
+  "item.ysproject.tail": "尾巴肉",
+  "item.ysproject.cooked_tail": "熟尾巴肉",
+  "item.ysproject.shrimp": "生虾",
+  "item.ysproject.cooked_shrimp": "、熟虾",
+
   "item.ysproject.almond_water_red": "杏仁水(红)",
   "item.ysproject.almond_water_orange": "杏仁水(橙)",
   "item.ysproject.almond_water_yellow": "杏仁水(黄)",
