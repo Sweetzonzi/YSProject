@@ -40,5 +40,8 @@ public class YSFoodItems {//食品列表，仅注册用，具体属性请见item
     //熟虾
     public static final RegistryObject<Item> COOKED_SHRIMP = ItemRegistry.registerItem("cooked_shrimp",
             ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.COOKED_SHRIMP)));
+    //煎蜥蜴蛋
+    public static final RegistryObject<Item> FRIED_LIZARD_EGG = ItemRegistry.registerItem("fired_lizard_egg",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.FRIED_LIZARD_EGG)));
 
 }
