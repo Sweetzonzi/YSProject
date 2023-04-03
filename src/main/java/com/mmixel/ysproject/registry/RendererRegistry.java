@@ -1,4 +1,4 @@
-package com.mmixel.ysproject.listener;
+package com.mmixel.ysproject.registry;
 
 import com.mmixel.ysproject.YSProject;
 import com.mmixel.ysproject.block.YSBlockEntities;
@@ -10,7 +10,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = YSProject.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-public class ClientListener {
+public class RendererRegistry {
     @SubscribeEvent
     public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event){
         event.registerBlockEntityRenderer(YSBlockEntities.LOCKER.get(), LockerBlockRenderer::new);

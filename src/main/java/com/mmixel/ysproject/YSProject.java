@@ -1,8 +1,10 @@
 package com.mmixel.ysproject;
 
 import com.mmixel.ysproject.block.*;
-import com.mmixel.ysproject.listener.ClientListener;
-import com.mmixel.ysproject.item.ItemRegister;
+import com.mmixel.ysproject.registry.BlockEntityRegistry;
+import com.mmixel.ysproject.registry.BlockRegistry;
+import com.mmixel.ysproject.registry.RendererRegistry;
+import com.mmixel.ysproject.registry.ItemRegistry;
 import com.mmixel.ysproject.item.YSFoodItems;
 import com.mmixel.ysproject.item.YSPropItems;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,19 +17,19 @@ import software.bernie.geckolib3.GeckoLib;
 public class YSProject {
     public final static String MOD_ID = "ysproject";
     public YSProject(){
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();//获取mod总线
         //装载mod新增物品、方块和方块实体
         YSStructureBlocks.preregister();
         YSDecorationBlocks.preregister();
         YSFoodItems.preregister();
         YSPropItems.preregister();
         YSBlockEntities.preregister();
-        //注册新增物品、方块和方块实体
-        ItemRegister.ITEMS.register(modEventBus);
-        BlockRegister.BLOCKS.register(modEventBus);
-        BlockEntityRegister.BLOCK_ENTITIES.register(modEventBus);
+        //在mod总线注册新增物品、方块和方块实体
+        ItemRegistry.ITEMS.register(modEventBus);
+        BlockRegistry.BLOCKS.register(modEventBus);
+        BlockEntityRegistry.BLOCK_ENTITIES.register(modEventBus);
 
-        modEventBus.addListener(ClientListener::registerRenderers);//注册geckolib方块渲染？
+        modEventBus.addListener(RendererRegistry::registerRenderers);//注册geckolib方块渲染
 
         //初始化GeckoLib
         GeckoLib.initialize();
