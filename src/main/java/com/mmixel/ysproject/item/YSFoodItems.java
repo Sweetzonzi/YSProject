@@ -41,7 +41,53 @@ public class YSFoodItems {//食品列表，仅注册用，具体属性请见item
     public static final RegistryObject<Item> COOKED_SHRIMP = ItemRegistry.registerItem("cooked_shrimp",
             ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.COOKED_SHRIMP)));
     //煎蜥蜴蛋
-    public static final RegistryObject<Item> FRIED_LIZARD_EGG = ItemRegistry.registerItem("fired_lizard_egg",
+    public static final RegistryObject<Item> FRIED_LIZARD_EGG = ItemRegistry.registerItem("fried_lizard_egg",
             ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.FRIED_LIZARD_EGG)));
-
+    //克家菜--------------------------------------------
+    //一般客家菜：肉，鱼，虫
+    public static final RegistryObject<Item> CTHULHU_MEAT = ItemRegistry.registerItem("cthulhu_meat",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.CTHULHU_FOOD)));
+    public static final RegistryObject<Item> CTHULHU_FISH = ItemRegistry.registerItem("cthulhu_fish",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.CTHULHU_FOOD)));
+    public static final RegistryObject<Item> CTHULHU_INSECT = ItemRegistry.registerItem("cthulhu_insect",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.CTHULHU_FOOD)));
+    //屁菇
+    public static final RegistryObject<Item> PG = ItemRegistry.registerItem("pg",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.PG)));
+    //呐喊寿司
+    public static final RegistryObject<Item> FT = ItemRegistry.registerItem("ft",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.FT)));
+    //修格斯果冻
+    public static final RegistryObject<Item> XGS = ItemRegistry.registerItem("xgs",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.XGS)));
+    //深潜者仰望星空派
+    public static final RegistryObject<Item> SQZ = ItemRegistry.registerItem("sqz",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.SQZ)));
+    //毒汤
+    public static final RegistryObject<Item> DT = ItemRegistry.registerItem("dt",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.DT)));
+    //飞天意面
+    public static final RegistryObject<Item> FTYM = ItemRegistry.registerItem("ftym",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.FTYM)));
+    //果冻泡面
+    public static final RegistryObject<Item> GDPM = ItemRegistry.registerItem("gdpm",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.GDPM)));
+    //黑山羊崽种肉
+    public static final RegistryObject<Item> HSY1 = ItemRegistry.registerItem("hsy1",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.HSY1)));
+    //黑山羊崽肉排
+    public static final RegistryObject<Item> HSY2 = ItemRegistry.registerItem("hsy2",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.HSY2)));
+    //黄衣之王面具糖
+    public static final RegistryObject<Item> HYZW = ItemRegistry.registerItem("hyzw",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.HYZW)));
+    //克苏鲁软糖
+    public static final RegistryObject<Item> KSLRT = ItemRegistry.registerItem("kslrt",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.KSLRT)));
+    //空盆 不能吃
+    public static final RegistryObject<Item> KP = ItemRegistry.registerItem("kp",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD)));
+    //黑老头凉皮
+    public static final RegistryObject<Item> HLTLP = ItemRegistry.registerItem("hltlp",
+            ()->new Item(new Item.Properties().tab(YSTab.YS_FOOD).food(YSFoodProperties.HLTLP)));
 }
